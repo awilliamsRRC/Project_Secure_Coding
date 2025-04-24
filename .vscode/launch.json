@@ -1,22 +1,22 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\src\\api\\v1\\middleware\\errorHandler.ts",
-            "preLaunchTask": "tsc: build - tsconfig.json",
-            "outFiles": [
-                "${workspaceFolder}/dist/**/*.js"
-            ]
-        }
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Program",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder}/config/swaggerOptions.ts",  // Adjust this to your main TypeScript entry file
+        "preLaunchTask": "tsc: build - tsconfig.json",  // Pre-build task for TypeScript
+        "outFiles": [
+          "${workspaceFolder}/dist/**/*.js"
+        ],
+        "sourceMaps": true,
+        "resolveSourceMapLocations": [
+          "${workspaceFolder}/dist/**/*.js",  // Ensure source maps are correctly resolved
+          "${workspaceFolder}/src/**/*.ts"    // Map the original TypeScript files
+        ]
+      }
     ]
-}
+  }
+  

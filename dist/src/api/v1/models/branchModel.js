@@ -1,3 +1,4 @@
+"use strict";
 /**
  * @openapi
  * components:
@@ -23,10 +24,5 @@
  *           type: string
  *           description: The phone number for the branch.
  */
-
-export type Branch = {
-    id: string;
-    name: string;
-    address: string;
-    phone:string;
-};
+Object.defineProperty(exports, "__esModule", { value: true });
+//# sourceMappingURL=branchModel.js.map
